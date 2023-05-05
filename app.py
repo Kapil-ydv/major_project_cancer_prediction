@@ -33,11 +33,11 @@ def heart():
         DryCough=int(request.form['DryCough'])
         outcome=knn_final.predict([[Age,Gender,AirPollution,Alcoholuse,DustAllergy,OccuPationalHazards,GeneticRisk,BalancedDiet,Smoking,ChestPain,CoughingofBlood,Fatigue,WeightLoss,ShortnessBreath,Wheezing,FrequentCold,DryCough]])
         if outcome[0]==1:
-            result='Chances Of Cancer'
-            return render_template('single_prediction.html',result=result)
+            value='Chances Of Cancer'
+            return render_template('single_prediction.html',result=value)
         else:
             value='No Chances of Cancer'
-            return render_template('single_prediction.html',result=result)
+            return render_template('single_prediction.html',result=value)
 
 
 
